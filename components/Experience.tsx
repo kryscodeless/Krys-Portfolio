@@ -12,6 +12,8 @@ type ExperienceItem = {
   accent: string;
   bullets: Bullet[];
   skills: string[];
+  demoUrl?: string;
+  demoLabel?: string;
 };
 
 const experienceData: ExperienceItem[] = [
@@ -25,6 +27,8 @@ const experienceData: ExperienceItem[] = [
     workType: "Part-time",
     location: "Melbourne · Hybrid",
     accent: "#FF4D8D",
+    demoUrl: "https://reports.premierdata.com.au/29947_wangaratta_match_report.html",
+    demoLabel: "See something I built ↗",
     bullets: [
       {
         text: "Built full-stack and cloud architecture with React + TypeScript interfaces and Python services in Docker on AWS (S3, CloudFront, Lambda, API Gateway), using Terraform for reproducible infrastructure.",
@@ -385,6 +389,24 @@ export default function Experience() {
                     </span>
                   ))}
                 </div>
+                {e.demoUrl && (
+                  <a
+                    href={e.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:underline"
+                    style={{
+                      display: "inline-block",
+                      marginTop: 12,
+                      fontSize: 12.5,
+                      color: "#3B82F6",
+                      textDecoration: "none",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {e.demoLabel ?? "View demo ↗"}
+                  </a>
+                )}
               </div>
             </li>
           ))}
