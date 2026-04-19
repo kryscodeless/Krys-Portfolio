@@ -1,7 +1,6 @@
 # krystal-portfolio
 
 Personal portfolio for Krystal Nguyen — Next.js 14 (App Router) + TypeScript + Tailwind.
-Design is minimal & playful, inspired by [lindaislinda.com](https://lindaislinda.com/).
 
 ## Quick start
 
