@@ -185,10 +185,10 @@ export default function Projects() {
   const rest = filtered.filter((p) => !p.featured);
 
   return (
-    <section id="projects" style={{ padding: "80px 0 100px", background: "#F5EEFF" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
+    <section id="projects" style={{ padding: "52px 0 64px", background: "#F5EEFF" }}>
+      <div className="section-inner">
         {/* Header */}
-        <div className="flex items-baseline justify-between mb-7">
+        <div className="flex items-baseline justify-between mb-10">
           <div>
             <p className="font-hand mb-2" style={{ fontSize: 22, color: "#FF4D8D" }}>things I&apos;ve built</p>
             <h2 className="font-serif font-bold" style={{ fontSize: "clamp(30px,4vw,46px)", color: "#2D1B2E" }}>Personal Projects</h2>
@@ -226,17 +226,14 @@ export default function Projects() {
 
         {/* Featured grid */}
         {featured.length > 0 && (
-          <div
-            className="mb-5"
-            style={{ display: "grid", gridTemplateColumns: featured.length === 1 ? "1fr" : "1fr 1fr", gap: 20 }}
-          >
+          <div className={`mb-5 grid gap-5 ${featured.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
             {featured.map((p) => <FeaturedCard key={p.name} p={p} />)}
           </div>
         )}
 
         {/* Rest — 3-col grid */}
         {rest.length > 0 && (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[14px]">
             {rest.map((p) => <SmallCard key={p.name} p={p} />)}
           </div>
         )}

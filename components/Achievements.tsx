@@ -29,9 +29,9 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      style={{ padding: "80px 0 100px", background: "#F5EEFF" }}
+      style={{ padding: "52px 0 64px", background: "#F5EEFF" }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
+      <div className="section-inner">
         <p
           className="font-hand mb-2"
           style={{ fontSize: 22, color: "#3B82F6" }}
@@ -39,7 +39,7 @@ export default function Achievements() {
           wins & highlights
         </p>
         <h2
-          className="font-serif font-bold mb-11"
+          className="font-serif font-bold mb-10"
           style={{ fontSize: "clamp(30px,4vw,46px)", color: "#2D1B2E" }}
         >
           Achievements

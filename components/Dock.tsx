@@ -120,16 +120,19 @@ export default function Dock() {
               onMouseLeave={() => setHovered(null)}
               style={{
                 position: "relative",
-                padding: "6px 14px", borderRadius: 9999,
+                padding: "6px 10px", borderRadius: 9999,
                 fontSize: 12, fontWeight: 600, textDecoration: "none",
                 whiteSpace: "nowrap", transition: "all 0.2s",
+                display: "flex", alignItems: "center", gap: 5,
                 background: isActive ? "rgba(255,77,141,.22)" : "transparent",
                 color: isActive ? "#FF9FD8" : "rgba(255,255,255,.65)",
               }}
             >
-              {it.label}
+              <span className="sm:hidden">{it.icon}</span>
+              <span className="hidden sm:inline" style={{ padding: "0 4px" }}>{it.label}</span>
               {hovered === it.href && !isActive && (
                 <span
+                  className="sm:hidden"
                   style={{
                     position: "absolute", bottom: "calc(100% + 8px)", left: "50%",
                     transform: "translateX(-50%)", whiteSpace: "nowrap",

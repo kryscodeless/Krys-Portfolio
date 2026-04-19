@@ -8,7 +8,7 @@ export default function Hero() {
       style={{
         background:
           "linear-gradient(135deg, #2D1B2E 0%, #5A3A7F 50%, #1F3B7F 100%)",
-        padding: "80px 48px 120px",
+        padding: "52px 0 72px",
       }}
     >
       {/* Background blobs */}
@@ -87,14 +87,7 @@ export default function Hero() {
       </span>
 
       {/* Two-column grid */}
-      <div
-        className="relative z-10 w-full grid items-center gap-12"
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          gridTemplateColumns: "1fr 1fr",
-        }}
-      >
+      <div className="section-inner relative z-10 w-full grid items-center gap-12 grid-cols-1 md:grid-cols-2">
         {/* LEFT: text */}
         <div>
           <p
@@ -221,7 +214,7 @@ export default function Hero() {
 
         {/* RIGHT: animated visual */}
         <div
-          className="relative flex items-center justify-center"
+          className="relative hidden md:flex items-center justify-center"
           style={{ minHeight: 340 }}
         >
           {/* Outer spinning ring */}

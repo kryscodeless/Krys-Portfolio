@@ -2,8 +2,8 @@ import { profile } from "@/data/content";
 
 export default function Footer() {
   return (
-    <footer id="contact" style={{ padding: "80px 0 120px", background: "#2D1B2E", color: "#FDF4F8" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
+    <footer id="contact" style={{ padding: "52px 0 72px", background: "#2D1B2E", color: "#FDF4F8" }}>
+      <div className="section-inner">
         <p className="font-hand mb-2.5" style={{ fontSize: 22, color: "#FF9FD8" }}>let&apos;s talk ✿</p>
         <h2
           className="font-serif font-bold"

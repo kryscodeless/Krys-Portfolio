@@ -7,9 +7,9 @@ const skillsData: { category: string; items: string[]; accent: string }[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ padding: "80px 0 100px", background: "#F5EEFF" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
-        <h2 className="font-serif font-bold mb-11" style={{ fontSize: "clamp(30px,4vw,46px)", color: "#2D1B2E" }}>
+    <section id="skills" style={{ padding: "52px 0 64px", background: "#F5EEFF" }}>
+      <div className="section-inner">
+        <h2 className="font-serif font-bold mb-10" style={{ fontSize: "clamp(30px,4vw,46px)", color: "#2D1B2E" }}>
           Skills
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: 28 }}>

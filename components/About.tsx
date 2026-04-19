@@ -2,9 +2,9 @@ export default function About() {
   return (
     <section
       id="about"
-      style={{ padding: "80px 0 100px", background: "#F5EEFF" }}
+      style={{ padding: "52px 0 64px", background: "#F5EEFF" }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
+      <div className="section-inner">
         <p
           className="text-center uppercase tracking-widest mb-1"
           style={{
@@ -16,16 +16,13 @@ export default function About() {
           Get To Know
         </p>
         <h2
-          className="font-serif font-bold text-center mb-14"
+          className="font-serif font-bold text-center mb-10"
           style={{ fontSize: "clamp(28px,4vw,40px)", color: "#2D1B2E" }}
         >
           About Me
         </h2>
 
-        <div
-          className="grid gap-14 items-center"
-          style={{ gridTemplateColumns: "1fr 1.3fr" }}
-        >
+        <div className="grid gap-10 md:gap-14 items-center grid-cols-1 md:grid-cols-[1fr_1.3fr]">
           {/* LEFT: Avatar */}
           <div className="flex justify-center items-center relative">
             <div
@@ -111,10 +108,7 @@ export default function About() {
             </div>
 
             {/* Education + Skills cards */}
-            <div
-              className="grid gap-3.5 mb-6"
-              style={{ gridTemplateColumns: "1fr 1fr" }}
-            >
+            <div className="grid gap-3.5 mb-6 grid-cols-1 sm:grid-cols-2">
               <div
                 style={{
                   background: "rgba(255,255,255,.85)",

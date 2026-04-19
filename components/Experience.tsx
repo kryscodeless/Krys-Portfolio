@@ -214,10 +214,10 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      style={{ padding: "80px 0 100px", background: "#F5EEFF" }}
+      style={{ padding: "52px 0 64px", background: "#F5EEFF" }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
-        <div className="flex items-baseline justify-between mb-14">
+      <div className="section-inner">
+        <div className="flex items-baseline justify-between mb-10">
           <div>
             <h2
               className="font-serif font-bold"
@@ -232,9 +232,8 @@ export default function Experience() {
           {experienceData.map((e, idx) => (
             <li
               key={e.company}
+              className="grid grid-cols-1 md:grid-cols-[160px_1fr]"
               style={{
-                display: "grid",
-                gridTemplateColumns: "160px 1fr",
                 gap: 28,
                 paddingBottom: 44,
                 marginBottom: 44,
@@ -245,7 +244,7 @@ export default function Experience() {
               }}
             >
               {/* Left: number + meta */}
-              <div>
+              <div className="flex flex-row md:flex-col gap-4 md:gap-0">
                 <p
                   style={{
                     fontSize: 14,
@@ -265,21 +264,16 @@ export default function Experience() {
                 >
                   {e.location}
                 </p>
-                <span
+                <p
                   style={{
-                    display: "inline-block",
-                    marginTop: 6,
-                    fontSize: 11,
-                    padding: "3px 10px",
-                    borderRadius: 9999,
-                    background: "rgba(45,27,46,.06)",
-                    border: "1px solid rgba(45,27,46,.14)",
-                    color: "rgba(45,27,46,.55)",
-                    fontWeight: 500,
+                    marginTop: 4,
+                    fontSize: 13.5,
+                    color: "rgba(45,27,46,.42)",
+                    fontStyle: "italic",
                   }}
                 >
                   {e.workType}
-                </span>
+                </p>
                 {e.logo ? (
                   <img
                     src={e.logo}
